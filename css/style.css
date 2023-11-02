@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 100px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.download-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Electric Blue */
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/*Hero section*/
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px; /* Adjust as needed */
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 50%;
+    height: auto;
+}
+
+/*Products, about us, contact*/
+.products{
+    padding: 50px;
+    text-align: center;
+    background-color: #e8f4ff;
+    
+}
+.about {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact {
+    padding: 50px;
+    text-align: center;
+    
+}
+
+.features {
+    text-align: center;
+    padding: 50px;
+    background-color: #e8f4ff; /* Light blue background for features */
+}
+
+.feature__item {
+    width: 45%; /* Adjust as needed */
+    text-align: center;
+    margin: 20px;
+}
+
+.feature__item img {
+    width: 80px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/*Taam members*/
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+    padding: 20px;
+}
+
+.team-member {
+    flex: 1; /* Allows flexible box sizes */
+    min-width: 180px; /* Minimum width for each team member box */
+    max-width: 20%; /* Maximum width for each team member box */
+    text-align: center;
+    margin: 10px;
+}
+
+.team-member img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px; /* Spacing between the image and text */
+}
+
+/*Linkedin and github buttons*/
+
+.linkedin-button, .github-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bb6; /* LinkedIn */
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.github-button {
+    background-color: #333; /* GitHub */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
