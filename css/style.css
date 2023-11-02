@@ -7,8 +7,6 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .top-bar {
@@ -21,20 +19,20 @@ body {
 }
 
 .logo {
-    height: 100px;
+    height: 60px; /* Smaller logo for smaller screens */
 }
 
-.menu a {
+.menu a,
+.download-button {
     color: white;
     text-decoration: none;
     margin-right: 20px;
+    padding: 10px 20px;
 }
 
 .download-button {
-    padding: 10px 20px;
-    background-color: #007bff; /* Electric Blue */
+    background-color: #007bff;
     border: none;
-    color: white;
     cursor: pointer;
 }
 
@@ -42,26 +40,59 @@ body {
 .hero {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background-color: #f4f4f4;
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
 }
 
-.hero-content {
-    flex: 1;
-    padding-right: 50px; /* Adjust as needed */
+.text-container {
+    max-width: 100%; /* Adjust the width as needed */
 }
 
+.hero-content,
 .hero-image {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
 }
 
 .hero-image img {
     max-width: 50%;
     height: auto;
+}
+
+.hero-image {
+    margin-left: auto; /* This will push the image to the right */
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width: 650px) {
+    .hero {
+        flex-direction: row;
+    }
+
+    .text-container {
+        max-width: 50%;
+    }
+
+    .hero-image img {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .text-container,
+    .hero-image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
 }
 
 /*Products, about us, contact*/
@@ -90,18 +121,28 @@ body {
 }
 
 .features {
+    text-align: center;
+    line-height: 1.5;
     display: flex;
-    flex-direction: column; /* Stack the items vertically */
-    align-items: center; /* Center the items on the cross axis */
-    padding: 20px;
+    flex-wrap: wrap;
+    justify-content:center;
     background-color: #e8f4ff; /* Light blue background for features */
 }
 
 .feature-container {
     display: flex;
-    justify-content: center; /* Center the items on the main axis */
+    justify-content: space-around; /* Center the items on the main axis */
     flex-wrap: wrap; /* Ensures it wraps on smaller screens */
     width: 100%; /* Take the full width */
+}
+
+.h2feature{
+    flex: 1;
+    margin: 0 10px;
+    text-align: center; /* Center the text inside the feature */
+    min-width: 180px; /* Minimum width for each feature */
+    justify-content: space-around;
+    background-color: #e8f4ff;
 }
 
 .feature {
@@ -109,11 +150,12 @@ body {
     margin: 0 10px;
     text-align: center; /* Center the text inside the feature */
     min-width: 180px; /* Minimum width for each feature */
+    justify-content: space-around;
 }
 
 
 .feature__item {
-    width: 50%; /* Adjust as needed */
+    width: auto; /* Adjust as needed */
     text-align: center;
     margin: 20px;
 }
@@ -124,44 +166,37 @@ body {
     margin-bottom: 20px;
 }
 
-/*Taam members*/
+/*Team members*/
 
 .team-members {
+    text-align: center;
+    line-height: 1.5;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    justify-content: space-around;
 }
 
 .team-member {
+    margin: 10px;
+    flex: none;
     text-align: center;
-}
-
-.team-member .circle {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0 auto;
+    max-width: 250px;
 }
 
 .team-member img {
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-}
-
-.info {
-    margin-top: 10px;
+    border-radius: 50%;
+    margin-bottom: 15px; 
 }
 
 /*Linkedin and github buttons*/
 
 .linkedin-button, .github-button {
     display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
+    margin: 5px auto;
+    padding: 5px 10px;
     background-color: #007bb6; /* LinkedIn */
     color: white;
     text-decoration: none;
@@ -178,4 +213,16 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+@media (max-width: 767px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a,
+    .download-button {
+        margin-bottom: 10px;
+    }
 }
