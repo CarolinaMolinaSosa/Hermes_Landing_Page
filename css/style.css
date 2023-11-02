@@ -71,9 +71,16 @@ body {
     background-color: #e8f4ff;
     
 }
+
 .about {
     padding: 50px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* Change color as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
 }
 
 .contact {
@@ -84,17 +91,26 @@ body {
 
 .features {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; /* Center the items on the cross axis */
     padding: 20px;
     background-color: #e8f4ff; /* Light blue background for features */
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center; /* Center the items on the main axis */
+    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+    width: 100%; /* Take the full width */
 }
 
 .feature {
     flex: 1;
     margin: 0 10px;
     text-align: center; /* Center the text inside the feature */
+    min-width: 180px; /* Minimum width for each feature */
 }
+
 
 .feature__item {
     width: 50%; /* Adjust as needed */
@@ -113,23 +129,31 @@ body {
 .team-members {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
 }
 
 .team-member {
-    flex: 1; /* Allows flexible box sizes */
-    min-width: 180px; /* Minimum width for each team member box */
-    max-width: 20%; /* Maximum width for each team member box */
     text-align: center;
-    margin: 10px;
+}
+
+.team-member .circle {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
 }
 
 .team-member img {
-    width: 100px; /* Adjust as needed */
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 15px; /* Spacing between the image and text */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    margin-top: 10px;
 }
 
 /*Linkedin and github buttons*/
