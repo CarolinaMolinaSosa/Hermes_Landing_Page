@@ -1,228 +1,169 @@
-* {
-    box-sizing: border-box;
+
+body, h1, h2, h3, p, ul, li, figure, figcaption, blockquote, dl, dd {
     margin: 0;
     padding: 0;
+    font-weight: normal;
 }
 
+/* Body and global styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header and navigation styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
 }
 
 .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
+    padding: 0 10%;
 }
 
 .logo {
-    height: 60px; /* Smaller logo for smaller screens */
+    max-width: 100px;
 }
 
-.menu a,
-.download-button {
-    color: white;
+.menu a {
+    color: #fff;
     text-decoration: none;
-    margin-right: 20px;
-    padding: 10px 20px;
+    margin-right: 10px;
 }
 
 .download-button {
+    padding: 10px 20px;
     background-color: #007bff;
     border: none;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
 }
 
-/*Hero section*/
+/* Hero section */
 .hero {
+    background: #f4f4f4;
+    padding: 2rem 10%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
-    padding: 20px;
-}
-
-.text-container {
-    max-width: 100%; /* Adjust the width as needed */
-}
-
-.hero-content,
-.hero-image {
-    flex: 1;
-    text-align: left;
+    align-items: center;
 }
 
 .hero-image img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
 }
 
-.hero-image {
-    margin-left: auto; /* This will push the image to the right */
-    display: flex;
-    justify-content: flex-end;
-}
-
-@media (min-width: 650px) {
-    .hero {
-        flex-direction: row;
-    }
-
-    .text-container {
-        max-width: 50%;
-    }
-
-    .hero-image img {
-        max-width: 50%;
-    }
-}
-
-@media (max-width: 650px) {
-    .hero {
-        flex-direction: column;
-    }
-
-    .text-container,
-    .hero-image {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-    }
-}
-
-/*Products, about us, contact*/
-.products{
-    padding: 50px;
+/* Features section */
+.section-title {
     text-align: center;
-    background-color: #e8f4ff;
-    
-}
-
-.about {
-    padding: 50px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff; /* Change color as needed */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
-}
-
-.contact {
-    padding: 50px;
-    text-align: center;
-    
-}
-
-.features {
-    text-align: center;
-    line-height: 1.5;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    background-color: #e8f4ff; /* Light blue background for features */
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .feature-container {
     display: flex;
-    justify-content: space-around; /* Center the items on the main axis */
-    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
-    width: 100%; /* Take the full width */
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.h2feature{
-    flex: 1;
-    margin: 0 10px;
-    text-align: center; /* Center the text inside the feature */
-    min-width: 180px; /* Minimum width for each feature */
-    justify-content: space-around;
-    background-color: #e8f4ff;
+.feature-icon {
+    width: 50px; /* Set the width of the SVG */
+    height: auto; /* Maintain the aspect ratio of the SVG */
+    margin-bottom: 10px; /* Add some space below the SVG */
 }
 
 .feature {
     flex: 1;
-    margin: 0 10px;
-    text-align: center; /* Center the text inside the feature */
-    min-width: 180px; /* Minimum width for each feature */
-    justify-content: space-around;
+    margin: 1rem;
+    max-width: calc(50% - 2rem);
+    min-width: 300px;
+    text-align: center; 
 }
 
-
-.feature__item {
-    width: auto; /* Adjust as needed */
-    text-align: center;
-    margin: 20px;
+/* Ensure the feature container takes the full width */
+.features {
+    max-width: 100%;
+    padding: 2rem;
 }
 
-.feature__item img {
-    width: 80px; /* Adjust as needed */
-    height: auto;
-    margin-bottom: 20px;
+/* About section */
+.about {
+    padding: 2rem 10%;
 }
 
-/*Team members*/
+/* Contact and Team section */
+.contact {
+    background: #e9ecef;
+    padding: 2rem 10%;
+}
 
 .team-members {
-    text-align: center;
-    line-height: 1.5;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .team-member {
-    margin: 10px;
-    flex: none;
     text-align: center;
-    max-width: 250px;
+    margin: 1rem;
 }
 
-.team-member img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.circle img {
     border-radius: 50%;
-    margin-bottom: 15px; 
+    width: 100px;
+    height: 100px;
 }
 
-/*Linkedin and github buttons*/
+.info {
+    margin-top: 1rem;
+}
 
-.linkedin-button, .github-button {
-    display: block;
-    margin: 5px auto;
-    padding: 5px 10px;
-    background-color: #007bb6; /* LinkedIn */
-    color: white;
+.linkedin-button, .github-button, .twitter-button {
     text-decoration: none;
-    border: none;
-    cursor: pointer;
-}
-
-.github-button {
-    background-color: #333; /* GitHub */
-}
-
-footer {
-    background-color: #333;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
     color: white;
-    text-align: center;
-    padding: 20px;
+    border-radius: 5px;
 }
 
-@media (max-width: 767px) {
-    .menu {
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero, .features {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
 
-    .menu a,
-    .download-button {
+    .feature {
+        max-width: 100%; /* Each feature takes the full width on smaller screens */
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        display: block;
         margin-bottom: 10px;
     }
 }

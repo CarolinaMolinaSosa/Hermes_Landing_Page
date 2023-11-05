@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header and Navigation Bar -->
     <header>
         <nav class="top-bar">
             <img src="images/hermes.png" alt="Hermes Logo" class="logo">
             <div class="menu">
-                <a href="#products">Products</a>
-                <a href="#about">About Us</a>
                 <a href="#features">Features</a>
+                <a href="#about">About Us</a>
                 <a href="#contact">Contact Us</a>
-                <button class="download-button" type="button">Download</button>
+                <button class="download-button" onclick="location.href='URL-to-deployed-project'">View Project</button>
             </div>
         </nav>
     </header>
     
+    <!-- Intro Section -->
     <section class="hero">
         <div class="text-container">
             <h1>Welcome to the Hermes Project</h1>
@@ -30,73 +31,65 @@
         </div>
     </section>
     
-    
-    <section id="products" class="products">
-        <h2>Our Product</h2>
-        <p>We generate feedback through emotions for your marketing campaigns</p>
-        <img src="images/statistic.png" alt="Product Image">
-    </section>
-    
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are passionate students of Holberton Uruguay, for our final project we decided to use what we learned in the curriculum and more. We implemented artificial intelligence and machine learning to create a solution dedicated to marketing campaigns. we aim to improve the time spent on manual surveys through the recognition of expressions.</p>
-    </section>
-
-    <section id="h2feature" class="h2feature">
-        <h2>Features</h2>
-    </section>
-
+    <!-- Features Section -->
     <section id="features" class="features">
+        <h2 class="section-title">Key Features</h2>
+        <div class="feature-container">
             <div class="feature">
-                <div class="feature__item">
-                    <h3 class="section__title">Easy to use</h3>
-                        <p>In a few clicks you can...</p>
-                </div>
+                <img src="images/easy-to-use.svg" alt="Easy to Use" class="feature-icon">
+                <h3>Easy to use</h3>
+                <p>In a few clicks, you can have the information that you need in your hands.</p>
             </div>
-        <div class="feature">
-            <div class="feature__item">
-                <h3 class="section__title">Fast Response</h3>
-                    <p>Tired of data delays? With Hermes, you get the stats you need, fast. No fuss, no muss, just quick, clear insights.</p>
-             </div>
+            <div class="feature">
+                <img src="images/fast-response.svg" alt="Fast Response" class="feature-icon">
+                <h3>Fast Response</h3>
+                <p>Tired of data delays? With Hermes, you get the stats you need, fast.</p>
+            </div>
+            <div class="feature">
+                <img src="images/emotion-ai.svg" alt="Emotion AI" class="feature-icon">
+                <h3>Emotion AI</h3>
+                <p>Utilizing emotional recognition AI for deeper insights into customer engagement.</p>
+            </div>
         </div>
     </section>
+    
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Us</h2>
+        <p>We are passionate students of Holberton Uruguay, for our final project we decided to use what we learned in the curriculum and more. We implemented artificial intelligence and machine learning to create a solution dedicated to marketing campaigns. We aim to improve the time spent on manual surveys through the recognition of expressions. This is a Portfolio Project for <a href="https://holbertonschool.uy/">Holberton School</a>.</p>
+    </section>
+
+    <!-- Contact and Team Section -->
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
+        <h2 class="section-title">Contact Us</h2>
         <div class="team-members">
-            <!-- Washington -->
+            <!-- Team Members -->
             <div class="team-member">
                 <div class="circle">
-                    <img src="images/Caro.jpeg" alt="Washington Calda">
+                    <img src="images/Caro.jpeg" alt="WashingtonCalda">
                 </div>
                 <div class="info">
                     <h3>Washington Calda</h3>
-                    <p>Project Manager / Full-Stack</p>
+                    <p>Project Manager/ Full-Stack</p>
                     <a href="https://www.linkedin.com/in/washington-calda/" class="linkedin-button">LinkedIn</a>
-                <a href="https://github.com/Washx23" class="github-button">GitHub</a>
+                    <a href="https://github.com/Washx23" class="github-button">GitHub</a>
                 </div>
             </div>
-    
-            <!-- Andrés -->
             <div class="team-member">
                 <div class="circle">
-                    <img src="images/Caro.jpeg" alt="Andrés">
+                    <img src="images/Caro.jpeg" alt="AndrésMaciel">
                 </div>
                 <div class="info">
                     <h3>Andrés Maciel</h3>
-                    <p>Model Training /
-                        Back-End
-                    </p>
-
+                    <p>Model Training/ Back-End</p>
                     <a href="https://www.linkedin.com/in/andr%C3%A9s-maciel-05a075280/" class="linkedin-button">LinkedIn</a>
                     <a href="https://github.com/4mmZ" class="github-button">GitHub</a>
                 </div>
             </div>
-    
-            <!-- Gabriel -->
             <div class="team-member">
                 <div class="circle">
-                    <img src="images/Caro.jpeg" alt="Gabriel">
+                    <img src="images/Caro.jpeg" alt="GabrielBlasina">
                 </div>
                 <div class="info">
                     <h3>Gabriel Blasina</h3>
@@ -105,11 +98,9 @@
                     <a href="https://github.com/gabrielblasina" class="github-button">GitHub</a>
                 </div>
             </div>
-    
-            <!-- Carolina -->
             <div class="team-member">
                 <div class="circle">
-                    <img src="images/Caro.jpeg" alt="Caro">
+                    <img src="images/Caro.jpeg" alt="CarolinaMolina">
                 </div>
                 <div class="info">
                     <h3>Carolina Molina</h3>
@@ -118,11 +109,9 @@
                     <a href="https://github.com/CarolinaMolinaSosa" class="github-button">GitHub</a>
                 </div>
             </div>
-    
-            <!-- Nahuel -->
             <div class="team-member">
                 <div class="circle">
-                    <img src="images/Nahuel.jpeg" alt="Nahuel">
+                    <img src="images/Caro.jpeg" alt="NahuelSilva">
                 </div>
                 <div class="info">
                     <h3>Nahuel Silva</h3>
@@ -134,9 +123,10 @@
         </div>
     </section>
     
-    
+    <!-- Footer -->
     <footer>
         <p>&copy; 2023 Hermes Project</p>
+        <p>Link to the <a href="https://github.com/Washx23/Hermes_HBTON">GitHub Repository</a></p>
     </footer>
     <script src="js/main.js"></script>
 </body>
