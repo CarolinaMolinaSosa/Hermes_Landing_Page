@@ -50,14 +50,19 @@ header {
     background: #f4f4f4;
     padding: 2rem 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* This already ensures that child elements are spaced out */
     align-items: center;
 }
 
-.hero-image img {
-    max-width: 100%;
-    height: auto;
+.hero-image {
+    margin-left: auto; /* This will push the image to the right side of the flex container */
+    width: 40%; /* Adjust the width as needed */
 }
+
+.hero-content {
+    width: 60%; /* Adjust the width as needed, ensuring it adds up to 100% with the .hero-image width or less */
+}
+
 
 /* Features section */
 .section-title {
