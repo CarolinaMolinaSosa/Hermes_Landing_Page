@@ -52,18 +52,34 @@ header {
     cursor: pointer;
 }
 
-/* Hero section */
+/* Estilos para la sección Hero */
 .hero {
     background: #f4f4f4;
     padding: 2rem 10%;
     display: flex;
-    justify-content: space-between; /* This already ensures that child elements are spaced out */
+    justify-content: space-between;
     align-items: center;
 }
 
+/* Estilos para la imagen en la sección Hero */
 .hero-image {
-    margin-left: auto; /* This will push the image to the right side of the flex container */
-    width: 40%; /* Adjust the width as needed */
+    width: 40%; /* Ancho original */
+    max-width: 300px; /* Ancho máximo para dispositivos móviles */
+    margin-bottom: 1rem;
+}
+
+/* Media query para dispositivos móviles (ancho máximo de 768px) */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        text-align: center; /* Centra el contenido horizontalmente */
+    }
+
+    .hero-image {
+        width: 80%; /* Ocupa el 80% del ancho en dispositivos móviles */
+        max-width: 100%; /* Aprovecha todo el ancho disponible */
+        margin-bottom: 1rem;
+    }
 }
 
 .hero-content {
@@ -315,7 +331,7 @@ footer a {
 }
 
 .image-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
 }
 
 /* Estilos para el modal de imgs */
