@@ -27,7 +27,7 @@
             <p>We generate feedback through emotions for your marketing campaigns</p>
         </div>
         <div class="hero-image">
-            <img src="images/statistic.png" alt="Hero Image">
+            <img src="images/statistic.png" alt="Hero Image" class="slide-from-right">
         </div>
     </section>
     
@@ -53,6 +53,26 @@
         </div>
     </section>
     
+    <section id="gallery" class="gallery">
+        <div class="image-gallery-container">
+        <h2 class="section-title">Gallery</h2>
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="images/image1.jpg" alt="Image 1" onclick="openModal('images/image1.jpg')">
+                </div>
+                <div class="image-item">
+                    <img src="images/image2.jpg" alt="Image 2" onclick="openModal('images/image2.jpg')">
+                </div>
+                <!-- More img? -->
+            </div>
+        </div>
+    
+        <!-- Modal para mostrar la imagen en pantalla completa -->
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" class="modal-content">
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -117,6 +137,21 @@
         <p>&copy; 2023 Hermes Project</p>
         <p>Link to our project <a href="https://github.com/Washx23/Hermes_HBTON">GitHub Repository</a></p>
     </footer>
+
+    <!-- scrip imagenes -->
     <script src="js/main.js"></script>
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-image');
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+        }
+    
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+    </script>     
 </body>
 </html>

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // You can redirect to a download link or perform any action you wish
         // window.location.href = 'your_download_link_here';
     });
-  
+
     // LinkedIn and GitHub buttons for team members
     const linkedinButtons = document.querySelectorAll('.linkedin-button');
     const githubButtons = document.querySelectorAll('.github-button');
@@ -37,4 +37,5 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = button.getAttribute('href');
         });
     });
+
   });

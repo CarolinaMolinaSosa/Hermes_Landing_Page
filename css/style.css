@@ -25,11 +25,18 @@ header {
     align-items: center;
     padding: 0 10%;
 }
-
+/* Estilo básico del logo */
 .logo {
     max-width: 100px;
+    transition: transform 2s ease, max-width 0.3s ease;
 }
 
+/* Efecto de giro y cambio de tamaño al pasar el mouse sobre el logo */
+.logo:hover {
+    max-width: 102px; /* Aumenta ligeramente el tamaño al pasar el mouse sobre él */
+    transform: rotate(720deg); /* Rota el logo 720 grados al pasar el mouse sobre él */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el logo */
+}
 .menu a {
     color: #fff;
     text-decoration: none;
@@ -172,3 +179,177 @@ footer a {
         margin-bottom: 10px;
     }
 }
+
+/* Button Effects */
+.download-button, .linkedin-button, .github-button, .twitter-button {
+    transition: all 0.3s ease;
+}
+
+.download-button:hover, 
+.linkedin-button:hover, 
+.github-button:hover, 
+.twitter-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.download-button {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.linkedin-button, .github-button, .twitter-button {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.feature {
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*small screen*/
+@media (max-width: 768px) {
+
+
+    .feature {
+        margin: 1rem 0;
+        max-width: calc(100% - 2rem);
+        min-width: auto;
+    }
+}
+
+
+/*Animaciones*/
+
+/* Animación de izquierda a derecha para el contenedor del texto1 */
+@keyframes slideInFromLeftText {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de entrada de derecha a izquierda para el contenedor del texto2 */
+@keyframes slideInFromRightAbout {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de entrada de derecha a izquierda para la imagen */
+@keyframes slideInFromRightImage {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos para el contenedor del texto1 */
+.text-container {
+    animation: slideInFromLeftText 2s ease forwards;
+}
+.text-container h1,
+.text-container p {
+    margin: 0;
+}
+
+/* Estilos para el contenedor del texto2 */
+.about {
+    animation: slideInFromRightAbout 5s ease forwards;
+}
+.about h2,
+.about p {
+    margin: 0;
+}
+
+/* Aplicar la animación a la imagen */
+.slide-from-right {
+    animation: slideInFromRightImage 2s ease forwards;
+}
+
+
+
+/* Estilos para la galería de imágenes */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.image-item {
+    width: 650px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 5px; 
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block; /*superpongan */
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para el modal de imgs */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Contenedor img */
+.image-gallery-container {
+    background-color: #e9ecef; /*gris */
+    padding: 20px; 
+}
+
